@@ -1,0 +1,258 @@
+.left_sub_menu {
+    position: fixed;
+    top: 50px;
+    width: 200px;
+    z-index: 10;
+    /*left: 45px;*/
+    background: white;
+    border-right: 1px solid rgba(0, 0, 0, 0.07);
+    bottom: 50px;
+    height: 100%;
+    margin-bottom: -70px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    box-shadow: 0 0px 24px 0 rgb(0 0 0 / 6%), 0 1px 0px 0 rgb(0 0 0 / 2%);
+    color: black;
+}
+
+.sub_menu {
+    margin-top: 50px;
+}
+
+.sub_menu>h2 {
+    padding-bottom: 4px;
+    border-bottom: 3px solid #797979;
+    margin-top: 30px;
+    font-size: 21px;
+    font-weight: 600;
+    color: #333;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'NotoKrB';
+    line-height: 35px;
+}
+
+.sub_menu .fas {
+    color: #ff5858;
+    font-size: 20px;
+    line-height: 20px;
+    float: right;
+    margin-right: 20px;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+a {
+    color: #797979;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.sub_menu ul li {
+    position: relative;
+}
+
+.menu_depth_2 {
+    display: none;
+}
+
+.menu_depth_3 {
+    display: none;
+}
+
+.menu_depth_1 > ul > li {
+    position: relative;
+}
+
+.menu_depth_2 > ul > li {
+    position: relative;
+}
+
+.sub_menu ul li:hover{
+    background-color: #8888;
+}
+
+.sub_menu ul li.active > div{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    background-color: #fff;
+    opacity: 1;
+    border-left: 1px solid #eee;
+}
+
+.menu_depth_1 > ul > li {
+    color: #797979;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 20px 0px 8px 14px;
+    border-bottom: 1px solid #e1e1e1;
+    cursor: pointer;
+}
+
+.menu_depth_2 ul li {
+    color: #797979;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 20px 0px 8px 14px;
+}
+
+.board_list_table table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.board_list_title {
+    margin-bottom: 60px;
+}
+
+.board_list_title h3 {
+    font-size: 28px;
+    color: #333333;
+    font-weight: 400;
+    text-align: center;
+}
+
+.board_list_table {
+    font-size: 13px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.board_list_table a {
+    color: #333;
+    display: inline-block;
+    line-height: 1.4;
+    word-break: break-all;
+    vertical-align: middle;
+}
+
+.board_list_table a:hover {
+    text-decoration: underline;
+}
+
+.board_list_table th {
+    text-align: center;
+}
+
+.board_list_table .th_num {
+    width: 100px;
+    text-align: center;
+}
+
+.board_list_table .th_writer {
+    width: 200px;
+}
+
+.board_list_table .th_date {
+    width: 200px;
+}
+
+.board_list_table th, .board_list_table td {
+    padding: 14px 0;
+}
+
+.board_list_table tbody td {
+    border-top: 1px solid #e7e7e7;
+    text-align: center;
+}
+
+.board_list_table tbody th {
+    padding-left: 28px;
+    padding-right: 14px;
+    border-top: 1px solid #e7e7e7;
+    text-align: left;
+}
+
+.board_list_table tbody th p{
+    display: none;
+}
+
+.board_list_container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.board_list_section{
+    display: none;
+    list-style: none;
+    text-decoration: none;
+    padding: 80px 0;
+    box-sizing: border-box;
+}
+
+.board_detail_section{
+    display: block;
+    width : 1100px;
+    text-align: center;
+    margin : auto;
+    list-style: none;
+    text-decoration: none;
+    padding: 80px 0;
+    box-sizing: border-box;
+}
+
+.board_detail_title {
+    margin-bottom: 60px;
+}
+
+.board_detail_title h3 {
+    font-size: 28px;
+    color: #333333;
+    font-weight: 400;
+    text-align: center;
+}
+
+.board_detail_container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.board_detail_table {
+    font-size: 13px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.board_detail_table .th_title {
+    width: 500px;
+    border-right: 1px solid #ccc;
+}
+
+.board_detail_table .th_writer {
+    width: 100px;
+    border-right: 1px solid #ccc;
+}
+
+.board_detail_table .th_date {
+    width: 100px;
+}
+
+.board_detail_table th, .board_detail_table td {
+    padding: 14px 0;
+}
+
+.board_detail_content{
+    display: block;
+    word-break:break-all;
+    position: relative;
+    width: fit-content;
+    padding: 15px;
+    margin: 0 auto 20px 0;
+}

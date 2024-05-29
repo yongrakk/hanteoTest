@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.hanteo.mapper.BoardMapper">
+
+    <select id="selectAll" resultType="com.example.hanteo.dto.BoardCateDto">
+        select
+            cateId as boardCateId,
+            parentId as boardParentId,
+            cateNm as boardCateNm,
+            cateDepth as boardCateDepth
+        from boardCategory
+        order by cateId
+    </select>
+
+    <select id="selectBoardListName" resultType="java.lang.String">
+        select
+            cateNm as boardCateNm
+        from boardCategory
+        where cateId = #{boardCateId}
+    </select>
+
+    <select id="selectBoardListById" resultType="com.example.hanteo.dto.BoardListDto">
+        select
+            b.boardNo,
+            case when b.cateId ='00000' then '(익명)' else boardWriter end as boardWriter,
+            b.boardTitle,
+            DATE_FORMAT(boardDate,'%Y-%m-%d') as boardDate,
+            b.cateId as boardCateId
+        from board b
+        where b.cateId = #{boardCateId}
+        order by b.boardNo desc
+    </select>
+
+    <select id="selectBoardDetailById" resultType="com.example.hanteo.dto.BoardDetailDto">
+        select
+            boardNo,
+            case when cateId ='00000' then '(익명)' else boardWriter end as boardWriter,
+            boardTitle,
+            DATE_FORMAT(boardDate,'%Y-%m-%d') as boardDate,
+            boardContent as boardContent,
+            cateId as boardCateId
+        from board
+        where cateId = #{boardCateId} and boardNo = #{boardNo}
+    </select>
+
+</mapper>
